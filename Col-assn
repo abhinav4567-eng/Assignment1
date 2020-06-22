@@ -1,0 +1,135 @@
+1.The difference between Array and collection are
+a.Array is an object where as Collection is an Interface.
+b.Array is fixed in size where as Collection is not fixed in size.
+c.Arrays are of static type where as Collection are of dynamic type.
+d.Array can store primitive data as well as objects where as Collection cannot store primtive data and can only store objects.
+
+2.The various Interfaces used in collection framework are:
+a.Collection Interface:It is the parent Interface all the sub-implementations of Interfaces are comes from here.It can be used to store and manupulate group of Objects.
+b.List Interface:It can store duplicate values.It maintans insertion order.Further,it allows null values.
+c.Set Interface:It cannot store null values.It does not maintans Insertion order.And it cannot storeduplicate values.
+
+3.The difference between AL and Vector are:
+a.Al is multithreaded where as Vector is single threaded.
+b.AL methods are not sysnchronized but in Vector methods are synchroized.
+c.AL has incrermetal capacity of cc*3/2 and incremental capacity of vector is cc*2.
+d.AL is not a legacy class but Vector is a legacy class.
+e.AL is faster where as Vector is slower.
+
+4.The difference btw Al and LL are:
+a.Al store the data in the form of Array where as LL store the data in the form of Node.
+b.AL has incremental and initial capacity both but LL does not have.
+c.Al support maker Interface like Serializable,Cloneable and random access where as LL support marker interfaces like serializable and cloneable.
+d.AL is better is for serarch and retreival operations but LL is suitable for updating operations.
+
+5.The differene btw Iterator and ListIterator are:
+a.Iterator can be used in Collection framework but List Iterator can be used for List Collection.
+b.Iterator can Iterate in forward direction but LI can iterate in both directions.
+c.Iterator object can be created by calling iterator() method present in Collection Interface where as LI object is created bylistIterator() method present in List Interface.
+
+6.The difference btw List and Set are:
+List Interface:It can store duplicate values.It maintans insertion order.Further,it allows null values.
+Set Interface:It cannot store null values.It does not maintans Insertion order.And it cannot storeduplicate values.
+
+7.The difference btw HashSet and HashMap are:
+a.HashSet contains only values where as HashMap includes key and value pair i.e entry
+b.HashSet implements Set Interface where as HashMap implements Map Interface.
+c.HashSet cannot have duplicate value but Hash Map can contains duplicate values with unique keys.
+
+8.The difference btw HashSet and TreeSet are:
+a.HashSet is implemented by HashTable but TreeSet is implemented by Tree Structure.
+b.HashSet is faster than Tree Set.
+c.HashSet does not maintains Comparable or Comparator but Tree Set have it.
+
+9.The difference btw HashMap and HashTable are:
+a.HashMap is multithreaded whereas HashTable is single threaded.
+b.Methods are not synchronized in HashMap where as methods are synchronized in HashTable.
+c.HashMap can store single Null key but HashTable cannot store store even a single null key.
+d.HashMap has initial capacity of 16 but HashTable has initial capacity of 11.
+e.HashMap is fater but HashTable is slower.
+
+10.The difference between Comparable and Comparator are:
+a.Comparable provides single sorting sequence where as Comparator provides multiple sorting sequence.
+b.Comparable provides CompareTo() method to sort elements where as Comparator provides Compare() method to sort elements.
+c.Comparable is present in java.lang package but Comparator is present in java.util package.
+
+11.We synchroize List,Set and Map elements by applying certain methods:
+a.+static List synchronizedList(List l){}
+b.+static Set synchroizedSet(Set s){}
+->+static SoredSet synchroizedSortedSet(SortedSet){}
+c.+static Map synchronizedMap(Map m){}
+->+static SortedMap synchroizedSortedMap(SortedMap m){}
+
+13.The difference btw Array and ArrayList are:
+a.Array is fixed in size where as ArrayList is not fixed in size.
+b.Array are of static type but ArrayList are of Dynamic tyepe.
+c.Array can store primitive data types as well as objects but AL cannot store primitive data type but it can store objects.
+
+15.Java Program to copy one aL to another using Collection.copy method:
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Copy {
+   public static void main (String[] args) {
+      List<String> fruit = new ArrayList<String>();
+      fruit.add("apple");
+      fruit.add("guava");
+      fruit.add("banana");
+      List<String> list = new ArrayList<String>();
+      list.add("Hey");
+      list.add("There");
+      list.add("You");
+      Collections.copy(list,fruit);
+      System.out.println(list);
+   }
+}
+
+16.Java Programs to swap two elements in an AL:
+import java.util.ArrayList;
+import java.util.Collections;
+ 
+public class Swap {
+ 
+    public static void main(String a[]){
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("Abhinav");
+        list.add("is");
+        list.add("Playing");
+        list.add("Volley");
+        list.add("Ball");
+        list.add("and");
+        list.add("Cricket");
+         
+        Collections.swap(list, 2, 5);
+        System.out.println("Results after swap operation:");
+        for(String str: list){
+            System.out.println(str);
+        }
+    }
+}
+
+17.Java Program to iterate through elements starting at specified position:
+import java.util.LinkedList;
+import java.util.Iterator;
+  public class LinkedList1 {
+  public static void main(String[] args) {
+     LinkedList<String> list = new LinkedList<String>();
+         list.add("apple");
+         list.add("mango");
+         list.add("jelly");
+         list.add("banana");
+         list.add("guava");
+
+   Iterator p = list.listIterator(1);
+
+   while (p.hasNext()) {
+   System.out.println(p.next());
+   }
+   }
+}
+
+
+
+
+      
